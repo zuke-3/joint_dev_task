@@ -31,7 +31,7 @@ foreach($numbers as $number){
   $count++;
   }
 }
-print_r($count . "回"."<br>");
+print_r($count . "回");
 echo PHP_EOL;
 
 print("#####q4#####".PHP_EOL);
@@ -39,8 +39,8 @@ $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null,
 
   # 以下に回答を記載
 
- $sports = array_unique($sports);
- print_r($sports);
+$sports = array_diff($sports,[null]);
+print_r($sports);
 echo PHP_EOL;
 
 print("#####q5#####".PHP_EOL);
@@ -65,21 +65,22 @@ print("#####q6#####".PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
   # 以下に回答を記載
+$numbers2 = [];
 foreach($numbers1 as $number){
     $number *= 10;
     array_push($numbers2,$number);
 }
 print_r($numbers2);
+
 echo PHP_EOL;
 
 print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
-  $int = array();
-foreach($ints as $int) {
-    $int[] = intval($string);
-}
+$array = array_map('intval',$array);
+var_dump($array);
+echo PHP_EOL;
 
   # 以下は変更しないで下さい
 var_dump($array);
@@ -91,7 +92,7 @@ $programming_languages = ["php","ruby","python","javascript"];
 
   # 以下に回答を記載
 $programming_languages = array_map('strtoupper',$programming_languages);
-
+$upper_case_programming_languages = array_map('strtoupper',$programming_languages);
 
   # 以下は変更しないで下さい
 print_r($programming_languages);
@@ -99,5 +100,4 @@ echo PHP_EOL;
 print_r($upper_case_programming_languages);
 
 echo PHP_EOL;
-
 ?>
