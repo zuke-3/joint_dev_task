@@ -58,7 +58,7 @@ $array2 = [1, 5, 8, 10];
     echo "true".PHP_EOL;
   }else{
     echo "false".PHP_EOL;
-  }  
+  }
 echo PHP_EOL;
 
 print("#####q6#####".PHP_EOL);
@@ -79,7 +79,6 @@ $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
 $array = array_map('intval',$array);
-var_dump($array);
 echo PHP_EOL;
 
   # 以下は変更しないで下さい
@@ -91,7 +90,7 @@ print("#####q8#####".PHP_EOL);
 $programming_languages = ["php","ruby","python","javascript"];
 
   # 以下に回答を記載
-$programming_languages = array_map('strtoupper',$programming_languages);
+$programming_languages = array_map('ucfirst',$programming_languages);
 $upper_case_programming_languages = array_map('strtoupper',$programming_languages);
 
   # 以下は変更しないで下さい
