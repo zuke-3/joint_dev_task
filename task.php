@@ -119,10 +119,12 @@ print("#####q10#####".PHP_EOL);
 $foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼","高級なうに"];
 
   # 以下に回答を記載
-  if(in_array( 'うに', $foods)) {
+foreach($foods as $food){
+  if(preg_match('/うに/',$food)) {
     echo "好物です";
 }else{
   echo "まぁまぁ好きです";
+}
 }
 
 echo PHP_EOL;
